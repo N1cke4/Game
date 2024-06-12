@@ -22,15 +22,19 @@ namespace WinFormsApp5
             InitializeComponent();
         }
 
+
+        
         private void FormMine_Load(object sender, EventArgs e)
         {
 
         }
 
-        public void Show(string nameOre,string ore, string worker)
+        public void Show(string nameOre, string ore, string worker)
         {
-            labelOre.Text = nameOre + "Ore: " + ore;
-            labelWorker.Text = "Worker: " + worker;
+            labelOre1.Text = ore;
+            labelOre.Text = nameOre;
+            labelWorker.Text = worker;
+            this.Text = nameOre + " Mine";
         }
 
         private void buttonSell_Click(object sender, EventArgs e)
@@ -53,9 +57,31 @@ namespace WinFormsApp5
             isButtonSell = false;
         }
 
+
+
+
         private void buttonBuy_Click(object sender, EventArgs e)
         {
             isButtonBuy = true;
+
+
+        }
+
+
+        public void forBalanceShow(int balance)
+        {
+            labelBalance.Text = "Balance: " + balance.ToString() + "$";
+        }
+
+        public void forMineSell(double sellPrice)
+        {
+            buttonBuy.Text = sellPrice.ToString() + "$";
+            if (labelWorker.Text == "14")
+            {
+                buttonBuy.Text = "SOLD";
+                label1.Text = "";
+                buttonBuy.Enabled = false;
+            }
         }
     }
 }

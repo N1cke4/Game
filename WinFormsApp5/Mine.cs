@@ -32,18 +32,30 @@ namespace WinFormsApp5
             }
         }
 
+        private double SellPrice = 300;
+
         public void BuyWorker(FormMine formMine, ref int balance)
         {
             if (formMine.isButtonBuy == false)
             {
                 return;
             }
-            if (balance >= 300)
+            if (balance >= SellPrice)
             {
-                balance -= 300;
-                Worker += 1;
-                formMine.isButtonBuy = false;
+               
+                
+                {
+                    balance -= (int)SellPrice;
+                    Worker += 1;
+                    if (SellPrice <= 4800)
+                        SellPrice *= 2;
+                    formMine.isButtonBuy = false;
+                    formMine.forMineSell(SellPrice);
+                }
+
             }
+
+            
         }
 
 

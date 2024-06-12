@@ -29,12 +29,17 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             pictureBoxIronMine = new PictureBox();
             labelBalance = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             pictureBoxGoalMine = new PictureBox();
+            pictureBoxStoneMine = new PictureBox();
+            pictureBoxGoldMine = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIronMine).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxGoalMine).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxStoneMine).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxGoldMine).BeginInit();
             SuspendLayout();
             // 
             // pictureBoxIronMine
@@ -51,9 +56,10 @@
             // labelBalance
             // 
             labelBalance.AutoSize = true;
+            labelBalance.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelBalance.Location = new Point(15, 17);
             labelBalance.Name = "labelBalance";
-            labelBalance.Size = new Size(75, 15);
+            labelBalance.Size = new Size(102, 21);
             labelBalance.TabIndex = 1;
             labelBalance.Text = "Balance:100$";
             // 
@@ -73,6 +79,28 @@
             pictureBoxGoalMine.TabStop = false;
             pictureBoxGoalMine.Click += pictureBoxGoalMine_Click;
             // 
+            // pictureBoxStoneMine
+            // 
+            pictureBoxStoneMine.Image = (Image)resources.GetObject("pictureBoxStoneMine.Image");
+            pictureBoxStoneMine.Location = new Point(422, 17);
+            pictureBoxStoneMine.Name = "pictureBoxStoneMine";
+            pictureBoxStoneMine.Size = new Size(168, 101);
+            pictureBoxStoneMine.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxStoneMine.TabIndex = 0;
+            pictureBoxStoneMine.TabStop = false;
+            pictureBoxStoneMine.Click += pictureBoxStoneMine_Click;
+            // 
+            // pictureBoxGoldMine
+            // 
+            pictureBoxGoldMine.Image = (Image)resources.GetObject("pictureBoxGoldMine.Image");
+            pictureBoxGoldMine.Location = new Point(88, 321);
+            pictureBoxGoldMine.Name = "pictureBoxGoldMine";
+            pictureBoxGoldMine.Size = new Size(168, 101);
+            pictureBoxGoldMine.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxGoldMine.TabIndex = 0;
+            pictureBoxGoldMine.TabStop = false;
+            pictureBoxGoldMine.Click += pictureBoxGoldMine_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -80,11 +108,15 @@
             ClientSize = new Size(800, 450);
             Controls.Add(labelBalance);
             Controls.Add(pictureBoxGoalMine);
+            Controls.Add(pictureBoxGoldMine);
+            Controls.Add(pictureBoxStoneMine);
             Controls.Add(pictureBoxIronMine);
             Name = "Form1";
-            Text = "Form1";
+            Text = "MineFarm";
             ((System.ComponentModel.ISupportInitialize)pictureBoxIronMine).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxGoalMine).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxStoneMine).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxGoldMine).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -95,5 +127,7 @@
         private Label labelBalance;
         private System.Windows.Forms.Timer timer1;
         private PictureBox pictureBoxGoalMine;
+        private PictureBox pictureBoxStoneMine;
+        private PictureBox pictureBoxGoldMine;
     }
 }
