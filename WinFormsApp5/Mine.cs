@@ -47,8 +47,9 @@ namespace WinFormsApp5
                 {
                     balance -= (int)SellPrice;
                     Worker += 1;
-                    if (SellPrice <= 4800)
-                        SellPrice *= 2;
+                    if (Worker % 2 == 0)
+                        if(SellPrice <= 2400)
+                            SellPrice *= 2;
                     formMine.isButtonBuy = false;
                     formMine.forMineSell(SellPrice);
                 }

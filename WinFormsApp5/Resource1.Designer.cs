@@ -63,6 +63,16 @@ namespace WinFormsApp5 {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_form2 {
+            get {
+                object obj = ResourceManager.GetObject("background_form2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GoalMine {
             get {
                 object obj = ResourceManager.GetObject("GoalMine", resourceCulture);
@@ -83,9 +93,19 @@ namespace WinFormsApp5 {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap кнопка {
+        internal static System.Drawing.Bitmap pictureBoxGoldMine_Image {
             get {
-                object obj = ResourceManager.GetObject("кнопка", resourceCulture);
+                object obj = ResourceManager.GetObject("pictureBoxGoldMine.Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pictureBoxStoneMine_Image {
+            get {
+                object obj = ResourceManager.GetObject("pictureBoxStoneMine.Image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

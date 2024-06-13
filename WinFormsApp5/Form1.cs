@@ -26,14 +26,17 @@ namespace WinFormsApp5
 
             InitializeComponent();
             timer1.Start();
-            ironMine = new("Iron:");
-            coalMine = new("Coal:");
-            goldMine = new("Gold:");
-            stoneMine = new("Stone:");
+            ironMine = new("Iron ");
+            coalMine = new("Coal ");
+            goldMine = new("Gold ");
+            stoneMine = new("Stone ");
+
+
+           
         }
 
 
-
+         
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -79,7 +82,7 @@ namespace WinFormsApp5
         {
             formIronMine = new();
             formIronMine.Show();
-           
+
         }
 
 
@@ -96,21 +99,26 @@ namespace WinFormsApp5
         {
             formCoalMine = new();
             formCoalMine.Show();
-            
+
         }
 
         private void pictureBoxGoldMine_Click(object sender, EventArgs e)
         {
             formGoldMine = new();
             formGoldMine.Show();
-         
+
         }
 
         private void pictureBoxStoneMine_Click(object sender, EventArgs e)
         {
             formStoneMine = new();
             formStoneMine.Show();
-            
+
+        }
+
+        private void labelBalance_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

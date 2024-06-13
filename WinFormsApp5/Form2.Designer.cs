@@ -37,11 +37,14 @@
             labelWorker1 = new Label();
             label1 = new Label();
             labelBalance = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // labelOre1
             // 
             labelOre1.AutoSize = true;
+            labelOre1.BackColor = Color.Transparent;
             labelOre1.Font = new Font("SimSun", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelOre1.Location = new Point(15, 41);
             labelOre1.Name = "labelOre1";
@@ -61,13 +64,14 @@
             // 
             // buttonBuy
             // 
+            buttonBuy.BackColor = Color.Transparent;
             buttonBuy.Font = new Font("SimSun", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonBuy.Location = new Point(12, 248);
             buttonBuy.Name = "buttonBuy";
             buttonBuy.Size = new Size(159, 54);
             buttonBuy.TabIndex = 1;
             buttonBuy.Text = "300$";
-            buttonBuy.UseVisualStyleBackColor = true;
+            buttonBuy.UseVisualStyleBackColor = false;
             buttonBuy.Click += buttonBuy_Click;
             // 
             // buttonSell
@@ -92,6 +96,7 @@
             // labelOre
             // 
             labelOre.AutoSize = true;
+            labelOre.BackColor = Color.Transparent;
             labelOre.Font = new Font("SimSun", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelOre.Location = new Point(15, 4);
             labelOre.Name = "labelOre";
@@ -102,6 +107,7 @@
             // labelWorker1
             // 
             labelWorker1.AutoSize = true;
+            labelWorker1.BackColor = Color.Transparent;
             labelWorker1.Font = new Font("SimSun", 21.75F, FontStyle.Bold);
             labelWorker1.Location = new Point(256, 264);
             labelWorker1.Name = "labelWorker1";
@@ -112,6 +118,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("SimSun", 21.75F, FontStyle.Bold);
             label1.Location = new Point(12, 216);
             label1.Name = "label1";
@@ -122,12 +129,22 @@
             // labelBalance
             // 
             labelBalance.AutoSize = true;
+            labelBalance.BackColor = Color.Transparent;
             labelBalance.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelBalance.Location = new Point(235, 4);
             labelBalance.Name = "labelBalance";
             labelBalance.Size = new Size(122, 25);
             labelBalance.TabIndex = 3;
             labelBalance.Text = "Balance:100$";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Resource1.background_form2;
+            pictureBox1.Location = new Point(-7, -25);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(429, 327);
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
             // 
             // FormMine
             // 
@@ -143,9 +160,11 @@
             Controls.Add(labelWorker1);
             Controls.Add(labelOre);
             Controls.Add(labelOre1);
+            Controls.Add(pictureBox1);
             Name = "FormMine";
             Text = "Mine";
             Load += FormMine_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -161,5 +180,6 @@
         private Label labelWorker1;
         private Label label1;
         private Label labelBalance;
+        private PictureBox pictureBox1;
     }
 }
